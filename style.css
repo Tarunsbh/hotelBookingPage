@@ -160,19 +160,23 @@
     height: 200px; /* Set a fixed height for the images */
     object-fit: cover; /* Ensures the image covers the card area */
 }
+
 .facility-container {
     display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping of icons to next line */
-    justify-content: center; /* Center the icons */
-    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping to next line if necessary */
+    justify-content: space-evenly; /* Distribute space evenly */
+    align-items: center; /* Center items vertically */
+    padding: 10px 0; /* Padding for top and bottom */
+    margin-bottom: 20px; /* Space below the facility section */
 }
 .facility-card {
-    text-align: center;
-    margin: 10px; /* Margin for spacing */
+    text-align: center; /* Center text below icons */
+    margin: 5px; /* Margin for spacing */
     font-size: 0.8rem; /* Smaller font size */
-    flex: 0 0 80px; /* Set a fixed width for the icons */
+    flex: 0 1 70px; /* Allow items to grow, shrink with a base width */
+    max-width: 80px; /* Set a maximum width for each item */
 }
 .facility-icon {
-    font-size: 24px; /* Smaller icon size */
+    font-size: 24px; /* Icon size */
     color: #007bff; /* Bootstrap primary color */
 }
