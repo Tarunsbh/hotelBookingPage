@@ -160,11 +160,19 @@
     height: 200px; /* Set a fixed height for the images */
     object-fit: cover; /* Ensures the image covers the card area */
 }
-.facility-card {
-    text-align: center;
+.facility-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of icons to next line */
+    justify-content: center; /* Center the icons */
     margin-bottom: 20px;
 }
+.facility-card {
+    text-align: center;
+    margin: 10px; /* Margin for spacing */
+    font-size: 0.8rem; /* Smaller font size */
+    flex: 0 0 80px; /* Set a fixed width for the icons */
+}
 .facility-icon {
-    font-size: 40px;
+    font-size: 24px; /* Smaller icon size */
     color: #007bff; /* Bootstrap primary color */
 }
