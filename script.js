@@ -132,14 +132,16 @@ function switchTab(event) {
   });
 
   // Set active class for the clicked tab
-  event.currentTarget.classList.add("active");
-  event.currentTarget.setAttribute("aria-selected", "true");
+  const targetPaneId = event.currentTarget.getAttribute("data-bs-target");
+  const targetPane = document.querySelector(targetPaneId);
 
-  // Show the associated tab pane
-  const targetPane = document.querySelector(
-    event.currentTarget.getAttribute("data-bs-target")
-  );
-  targetPane.classList.add("show", "active");
+  // Check if the clicked tab is already active
+  if (!event.currentTarget.classList.contains("active")) {
+    event.currentTarget.classList.add("active");
+    event.currentTarget.setAttribute("aria-selected", "true");
+    // Show the associated tab pane
+    targetPane.classList.add("show", "active");
+  }
 }
 
 // Add event listeners to the tab buttons
