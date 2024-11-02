@@ -111,3 +111,39 @@ function removeRoom(element) {
   const roomDiv = element.closest(".room-card");
   roomDiv.remove();
 }
+
+// Function to switch tabs
+function switchTab(event) {
+  // Prevent default button action
+  event.preventDefault();
+
+  // Get all tab links and tab panes
+  const tabLinks = document.querySelectorAll(".nav-link");
+  const tabPanes = document.querySelectorAll(".tab-pane");
+
+  // Remove active class from all tabs and hide all tab panes
+  tabLinks.forEach((link) => {
+    link.classList.remove("active");
+    link.setAttribute("aria-selected", "false");
+  });
+
+  tabPanes.forEach((pane) => {
+    pane.classList.remove("show", "active");
+  });
+
+  // Set active class for the clicked tab
+  event.currentTarget.classList.add("active");
+  event.currentTarget.setAttribute("aria-selected", "true");
+
+  // Show the associated tab pane
+  const targetPane = document.querySelector(
+    event.currentTarget.getAttribute("data-bs-target")
+  );
+  targetPane.classList.add("show", "active");
+}
+
+// Add event listeners to the tab buttons
+const tabButtons = document.querySelectorAll(".nav-link");
+tabButtons.forEach((button) => {
+  button.addEventListener("click", switchTab);
+});
