@@ -161,22 +161,20 @@
     object-fit: cover; /* Ensures the image covers the card area */
 }
 
-.facility-container {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping to next line if necessary */
-    justify-content: space-evenly; /* Distribute space evenly */
-    align-items: left; /* Center items vertically */
-    padding: 10px 0; /* Padding for top and bottom */
-    margin-bottom: 20px; /* Space below the facility section */
-}
 .facility-card {
     text-align: center; /* Center text below icons */
-    margin: 3px; /* Margin for spacing */
+    margin: 5px; /* Margin for spacing */
     font-size: 0.8rem; /* Smaller font size */
-    flex: 0 1 70px; /* Allow items to grow, shrink with a base width */
-    max-width: 80px; /* Set a maximum width for each item */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent line breaks */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
 }
 .facility-icon {
     font-size: 24px; /* Icon size */
     color: #007bff; /* Bootstrap primary color */
+}
+/* Responsive card height */
+.facility-card {
+    max-width: 100px; /* Set a maximum width for each item */
+    width: 100%; /* Allow full width for the column */
 }
