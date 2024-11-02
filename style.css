@@ -160,4 +160,11 @@
     height: 200px; /* Set a fixed height for the images */
     object-fit: cover; /* Ensures the image covers the card area */
 }
-
+.facility-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.facility-icon {
+    font-size: 40px;
+    color: #007bff; /* Bootstrap primary color */
+}
