@@ -156,3 +156,8 @@
     background-color: #f8f9fa;
 }
 
+.card-img-top {
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the card area */
+}
+
