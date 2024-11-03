@@ -166,7 +166,7 @@
     margin: 5px; /* Margin for spacing */
     font-size: 0.8rem; /* Smaller font size */
     overflow: hidden; /* Hide overflow */
-    white-space: nowrap; /* Prevent line breaks */
+    white-space: wrap; /* Prevent line breaks */
     text-overflow: ellipsis; /* Show ellipsis for overflowed text */
 }
 .facility-icon {
@@ -177,4 +177,10 @@
 .facility-card {
     max-width: 100px; /* Set a maximum width for each item */
     width: 100%; /* Allow full width for the column */
+}
+
+@media (max-width: 768px) {
+    .facility-card {
+        max-width: 100px; /* Adjust width for smaller screens */
+    }
 }
